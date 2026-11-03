@@ -68,18 +68,19 @@ def board(d):
     col_x = NUM_X + 12 * (CELL_W + GAP)
     for c in (1, 2, 3):
         y = BOARD_Y + (3 - c) * (CELL_H + GAP)
-        cell(d, f"col{c}", col_x, y, 100, CELL_H, "casinoCellOutside", "2 to 1", 18)
+        cell(d, f"col{c}", col_x, y, 100, CELL_H, "casinoCellOutside", "$l10n_casino_cell_column", 18)
 
     dozen_y = BOARD_Y + 3 * (CELL_H + GAP)
     dozen_w = 4 * (CELL_W + GAP) - GAP
-    for k, label in enumerate(("1st 12", "2nd 12", "3rd 12")):
-        cell(d, f"doz{k + 1}", NUM_X + k * (dozen_w + GAP), dozen_y, dozen_w, 50, "casinoCellOutside", label, 20)
+    for k in range(3):
+        cell(d, f"doz{k + 1}", NUM_X + k * (dozen_w + GAP), dozen_y, dozen_w, 50, "casinoCellOutside",
+             f"$l10n_casino_cell_dozen{k + 1}", 20)
 
     even_y = dozen_y + 52
     even_w = (3 * dozen_w + 2 * GAP - 5 * GAP) // 6
-    simple = (("low", "1-18", "casinoCellOutside"), ("even", "$l10n_casino_bet_even", "casinoCellOutside"),
+    simple = (("low", "$l10n_casino_bet_low", "casinoCellOutside"), ("even", "$l10n_casino_bet_even", "casinoCellOutside"),
               ("red", "$l10n_casino_bet_red", "casinoCellRed"), ("black", "$l10n_casino_bet_black", "casinoCellBlack"),
-              ("odd", "$l10n_casino_bet_odd", "casinoCellOutside"), ("high", "19-36", "casinoCellOutside"))
+              ("odd", "$l10n_casino_bet_odd", "casinoCellOutside"), ("high", "$l10n_casino_bet_high", "casinoCellOutside"))
     for k, (key, label, profile) in enumerate(simple):
         cell(d, key, NUM_X + k * (even_w + GAP), even_y, even_w, 50, profile, label, 18)
 

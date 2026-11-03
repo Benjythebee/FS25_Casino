@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <elements>
+        <e k="ui_casinoFrame" v="Casino"/>
+
+        <e k="casino_table_feedStore" v="Futterhandel"/>
+        <e k="casino_table_grainSilo" v="Getreidesilo"/>
+        <e k="casino_table_highRoller" v="High Roller"/>
+
+        <e k="casino_finance_bets" v="Casino-Einsätze"/>
+        <e k="casino_finance_wins" v="Casino-Gewinne"/>
+        <e k="casino_farm" v="Hof"/>
+
+        <e k="casino_history" v="Zuletzt"/>
+        <e k="casino_chip" v="Jeton"/>
+        <e k="casino_players" v="Spieler"/>
+        <e k="casino_yourBets" v="Deine Einsätze"/>
+
+        <e k="casino_clearBets" v="Einsätze löschen"/>
+        <e k="casino_rebet" v="Einsätze wiederholen"/>
+
+        <e k="casino_phase_idle" v="Tisch geschlossen - setz dich, um ihn zu öffnen"/>
+        <e k="casino_phase_betting" v="Machen Sie Ihr Spiel - %d s"/>
+        <e k="casino_phase_spinning" v="Nichts geht mehr!"/>
+        <e k="casino_phase_result" v="%s - Gewinne ausgezahlt"/>
+
+        <e k="casino_color_red" v="Rot"/>
+        <e k="casino_color_black" v="Schwarz"/>
+        <e k="casino_color_green" v="Grün"/>
+
+        <e k="casino_seatEmpty" v="Freier Platz"/>
+        <e k="casino_seatEmptyClick" v="Freier Platz - klicken zum Hinsetzen"/>
+        <e k="casino_you" v="Du"/>
+        <e k="casino_seatStake" v="Im Spiel: %s"/>
+        <e k="casino_seatLast" v="Letzte Runde: %s gesetzt, %s gewonnen"/>
+        <e k="casino_seatWaiting" v="Wartet auf Einsätze"/>
+
+        <e k="casino_balance" v="Kontostand des Hofs: %s"/>
+        <e k="casino_stake" v="Dein Einsatz: %s von max. %s"/>
+        <e k="casino_noBets" v="Keine Einsätze in dieser Runde"/>
+        <e k="casino_moreBets" v="... und %d weitere"/>
+        <e k="casino_payout" v="Zahlt %d zu 1"/>
+
+        <e k="casino_access_watch" v="Nur der Hofverwalter kann setzen. Du kannst zuschauen."/>
+        <e k="casino_access_manager" v="Klicke auf einen freien Platz, um mit dem Geld deines Hofs zu spielen."/>
+        <e k="casino_access_seated" v="Wähle einen Jeton und klicke dann auf das Tableau."/>
+        <e k="casino_access_otherTable" v="Du sitzt am Tisch %s."/>
+
+        <e k="casino_notify_bet" v="Casino: %s hat %s am Tisch %s gesetzt"/>
+        <e k="casino_notify_won" v="Casino: Du hast %s am Tisch %s gesetzt und %s gewonnen"/>
+        <e k="casino_notify_lost" v="Casino: Du hast %s am Tisch %s gesetzt und nichts gewonnen"/>
+
+        <e k="casino_cell_column" v="2 zu 1"/>
+        <e k="casino_cell_dozen1" v="1. Dutzend"/>
+        <e k="casino_cell_dozen2" v="2. Dutzend"/>
+        <e k="casino_cell_dozen3" v="3. Dutzend"/>
+
+        <e k="casino_bet_split" v="Cheval"/>
+        <e k="casino_bet_corner" v="Carré"/>
+        <e k="casino_bet_street" v="Transversale"/>
+        <e k="casino_bet_sixLine" v="Sixain"/>
+        <e k="casino_bet_dozen" v="Dutzend"/>
+        <e k="casino_bet_column" v="Kolonne"/>
+        <e k="casino_bet_red" v="Rot"/>
+        <e k="casino_bet_black" v="Schwarz"/>
+        <e k="casino_bet_odd" v="Ungerade"/>
+        <e k="casino_bet_even" v="Gerade"/>
+        <e k="casino_bet_low" v="1-18"/>
+        <e k="casino_bet_high" v="19-36"/>
+
+        <e k="casino_error_alreadySeated" v="Du hast an diesem Tisch schon einen Platz."/>
+        <e k="casino_error_tableFull" v="Dieser Tisch ist voll."/>
+        <e k="casino_error_seatTaken" v="Dieser Platz ist besetzt."/>
+        <e k="casino_error_notSeated" v="Setz dich zuerst an den Tisch."/>
+        <e k="casino_error_farmChanged" v="Du hast den Hof gewechselt und den Tisch verlassen."/>
+        <e k="casino_error_betsClosed" v="Für diese Runde sind keine Einsätze mehr möglich."/>
+        <e k="casino_error_invalidBet" v="Dieser Einsatz ist hier nicht erlaubt."/>
+        <e k="casino_error_maxStake" v="Tischlimit für diese Runde erreicht."/>
+        <e k="casino_error_noMoney" v="Dein Hof kann diesen Einsatz nicht decken."/>
+        <e k="casino_error_tooManyBets" v="Zu viele Einsätze in dieser Runde."/>
+        <e k="casino_error_noFarm" v="Tritt einem Hof bei, um zu spielen."/>
+        <e k="casino_error_notManager" v="Nur der Hofverwalter kann setzen."/>
+        <e k="casino_error_noRebet" v="Keine Einsätze aus der letzten Runde zum Wiederholen."/>
+    </elements>
+</l10n>

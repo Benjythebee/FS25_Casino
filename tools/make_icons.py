@@ -1,22 +1,24 @@
-"""Draw the mod's textures and save them as uncompressed DDS.
+"""Draw the mod's textures and save them as block-compressed DDS (see dds.py).
 
     python tools/make_icons.py
 
-- icon_casino.dds       512x512 mod icon (colour)
-- images/menuIcon.dds   256x256 menu tab icon: white glyph on transparent, the game tints it
+- icon_casino.dds       512x512 mod icon, opaque, BC1 (ModHub: icon_*.dds, BC1, no mipmaps)
+- images/menuIcon.dds   256x256 menu tab icon: white glyph on transparent, the game tints it (BC3)
 - images/wheel.dds      512x512 roulette wheel with numbers; pocket i of the wheel order is centred i-1 steps
-                        clockwise from the top (CasinoFrame rotates it so the result ends under the pointer)
-- images/ball.dds       512x512 transparent layer with the ball at the top, same size as the wheel
-- images/leave.dds      128x128 white "leave seat" glyph
+                        clockwise from the top (CasinoFrame rotates it so the result ends under the pointer) (BC3)
+- images/ball.dds       512x512 transparent layer with the ball at the top, same size as the wheel (BC3)
+- images/leave.dds      128x128 white "leave seat" glyph (BC3)
 
-Needs Pillow. The DDS writer is inline (32-bit BGRA, no mipmaps), which the GIANTS engine loads as is.
+Needs Pillow and numpy.
 """
 
 import math
-import struct
 from pathlib import Path
 
+import numpy as np
 from PIL import Image, ImageDraw, ImageFont
+
+from dds import save_bc1, save_bc3
 
 HERE = Path(__file__).resolve().parent
 MOD = HERE.parent / "FS25_Casino"
@@ -29,18 +31,15 @@ WHITE = (255, 255, 255, 255)
 SCALE = 4  # draw large, then downsample for smooth edges
 
 
-def save_dds(image, path):
-    image = image.convert("RGBA")
-    w, h = image.size
-    flags = 0x1 | 0x2 | 0x4 | 0x1000 | 0x8  # caps, height, width, pixelformat, pitch
-    pixel_format = struct.pack("<II4sIIIII", 32, 0x41, b"\0\0\0\0", 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000)
-    header = struct.pack("<4sIIIIII", b"DDS ", 124, flags, h, w, w * 4, 0) + struct.pack("<I", 0) + b"\0" * 44
-    header += pixel_format + struct.pack("<IIIII", 0x1000, 0, 0, 0, 0)
-    r, g, b, a = image.split()
-    data = Image.merge("RGBA", (b, g, r, a)).tobytes()
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(header + data)
-    print(f"wrote {path}")
+def check(source, path):
+    """Decode the written DDS with Pillow and report the error against the source (visible pixels only)"""
+    decoded = np.asarray(Image.open(path).convert("RGBA"), dtype=np.float64)
+    original = np.asarray(source.convert("RGBA"), dtype=np.float64)
+    weight = original[..., 3:4] / 255.0
+    mse_rgb = (((decoded[..., :3] - original[..., :3]) ** 2) * weight).sum() / max(weight.sum() * 3, 1)
+    mse_a = ((decoded[..., 3] - original[..., 3]) ** 2).mean()
+    psnr = lambda mse: 99.0 if mse == 0 else 10 * math.log10(255 ** 2 / mse)
+    print(f"  {path.name}: colour PSNR {psnr(mse_rgb):.1f} dB, alpha PSNR {psnr(mse_a):.1f} dB")
 
 
 def font(size):
@@ -163,9 +162,14 @@ def leave_glyph(size):
 
 def mod_icon(size):
     s = size * SCALE
-    img = Image.new("RGBA", (s, s), (0, 0, 0, 0))
+    # opaque background: BC1 has no transparency
+    img = Image.new("RGBA", (s, s), (10, 60, 30, 255))
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle([0, 0, s - 1, s - 1], radius=s * 0.08, fill=(10, 60, 30, 255))
+    for k in range(60):  # soft vignette towards the edges
+        inset = s * 0.5 * k / 60
+        shade = int(20 * (1 - k / 60))
+        d.rectangle([inset, inset, s - 1 - inset, s - 1 - inset], outline=(10 + shade // 3, 60 - shade, 30 - shade // 2, 255),
+                    width=int(s * 0.5 / 60) + 1)
     wheel = wheel_texture(int(size * 0.92)).resize((int(s * 0.92), int(s * 0.92)), Image.LANCZOS)
     img.alpha_composite(wheel, (int(s * 0.04), int(s * 0.02)))
     ball = ball_texture(int(size * 0.92)).resize((int(s * 0.92), int(s * 0.92)), Image.LANCZOS)
@@ -175,20 +179,25 @@ def mod_icon(size):
     box = d.textbbox((0, 0), text, font=f)
     tw, th = box[2] - box[0], box[3] - box[1]
     x, y = s / 2 - tw / 2, s * 0.92 - th
-    d.rounded_rectangle([x - s * 0.04, y - s * 0.03, x + tw + s * 0.04, y + th + s * 0.05], radius=s * 0.03, fill=(0, 0, 0, 210))
+    d.rounded_rectangle([x - s * 0.04, y - s * 0.03, x + tw + s * 0.04, y + th + s * 0.05], radius=s * 0.03, fill=(8, 14, 10, 255))
     d.text((x - box[0], y - box[1]), text, font=f, fill=GOLD)
     return img.resize((size, size), Image.LANCZOS)
 
 
 def main():
     icon = mod_icon(512)
-    save_dds(icon, MOD / "icon_casino.dds")
-    save_dds(tab_glyph(256), MOD / "images" / "menuIcon.dds")
     wheel = wheel_texture(512)
-    save_dds(wheel, MOD / "images" / "wheel.dds")
     ball = ball_texture(512)
-    save_dds(ball, MOD / "images" / "ball.dds")
-    save_dds(leave_glyph(128), MOD / "images" / "leave.dds")
+    outputs = [
+        (save_bc1, icon, MOD / "icon_casino.dds"),
+        (save_bc3, tab_glyph(256), MOD / "images" / "menuIcon.dds"),
+        (save_bc3, wheel, MOD / "images" / "wheel.dds"),
+        (save_bc3, ball, MOD / "images" / "ball.dds"),
+        (save_bc3, leave_glyph(128), MOD / "images" / "leave.dds"),
+    ]
+    for save, image, path in outputs:
+        save(image, path)
+        check(image, path)
 
     # previews (gitignored)
     icon.save(HERE / "icon_preview.png")

@@ -30,7 +30,7 @@
 
         <e k="casino_seatEmpty" v="Empty seat"/>
         <e k="casino_seatEmptyClick" v="Empty seat - click to sit"/>
-        <e k="casino_you" v="you"/>
+        <e k="casino_you" v="You"/>
         <e k="casino_seatStake" v="On the table: %s"/>
         <e k="casino_seatLast" v="Last round: staked %s, won %s"/>
         <e k="casino_seatWaiting" v="Waiting for bets"/>
@@ -39,7 +39,7 @@
         <e k="casino_stake" v="Your stake: %s of %s max"/>
         <e k="casino_noBets" v="No bets this round"/>
         <e k="casino_moreBets" v="... and %d more"/>
-        <e k="casino_payout" v="pays %d to 1"/>
+        <e k="casino_payout" v="Pays %d to 1"/>
 
         <e k="casino_access_watch" v="Only the farm manager can bet. You can watch."/>
         <e k="casino_access_manager" v="Click an empty seat to bet with your farm's money."/>
@@ -49,6 +49,11 @@
         <e k="casino_notify_bet" v="Casino: %s bet %s at %s"/>
         <e k="casino_notify_won" v="Casino: you bet %s at %s and won %s"/>
         <e k="casino_notify_lost" v="Casino: you bet %s at %s and did not win"/>
+
+        <e k="casino_cell_column" v="2 to 1"/>
+        <e k="casino_cell_dozen1" v="1st 12"/>
+        <e k="casino_cell_dozen2" v="2nd 12"/>
+        <e k="casino_cell_dozen3" v="3rd 12"/>
 
         <e k="casino_bet_split" v="Split"/>
         <e k="casino_bet_corner" v="Corner"/>

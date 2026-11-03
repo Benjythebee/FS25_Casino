@@ -472,7 +472,7 @@
             </Bitmap>
             <Bitmap profile="casinoCellOutside" id="casinoCell_col1" position="954px -504px" size="100px 64px">
                 <Bitmap profile="casinoCellWin" name="win" position="0px 0px" size="100px 64px"/>
-                <Text profile="casinoCellLabel" name="label" text="2 to 1" textSize="18px" position="0px 0px" size="100px 46px"/>
+                <Text profile="casinoCellLabel" name="label" text="$l10n_casino_cell_column" textSize="18px" position="0px 0px" size="100px 46px"/>
                 <Text profile="casinoCellStake" name="stake" text="" position="0px -44px" size="100px 18px"/>
                 <Bitmap profile="casinoDot1" name="dot1" position="3px -3px" size="9px 9px"/>
                 <Bitmap profile="casinoDot2" name="dot2" position="14px -3px" size="9px 9px"/>
@@ -483,7 +483,7 @@
             </Bitmap>
             <Bitmap profile="casinoCellOutside" id="casinoCell_col2" position="954px -438px" size="100px 64px">
                 <Bitmap profile="casinoCellWin" name="win" position="0px 0px" size="100px 64px"/>
-                <Text profile="casinoCellLabel" name="label" text="2 to 1" textSize="18px" position="0px 0px" size="100px 46px"/>
+                <Text profile="casinoCellLabel" name="label" text="$l10n_casino_cell_column" textSize="18px" position="0px 0px" size="100px 46px"/>
                 <Text profile="casinoCellStake" name="stake" text="" position="0px -44px" size="100px 18px"/>
                 <Bitmap profile="casinoDot1" name="dot1" position="3px -3px" size="9px 9px"/>
                 <Bitmap profile="casinoDot2" name="dot2" position="14px -3px" size="9px 9px"/>
@@ -494,7 +494,7 @@
             </Bitmap>
             <Bitmap profile="casinoCellOutside" id="casinoCell_col3" position="954px -372px" size="100px 64px">
                 <Bitmap profile="casinoCellWin" name="win" position="0px 0px" size="100px 64px"/>
-                <Text profile="casinoCellLabel" name="label" text="2 to 1" textSize="18px" position="0px 0px" size="100px 46px"/>
+                <Text profile="casinoCellLabel" name="label" text="$l10n_casino_cell_column" textSize="18px" position="0px 0px" size="100px 46px"/>
                 <Text profile="casinoCellStake" name="stake" text="" position="0px -44px" size="100px 18px"/>
                 <Bitmap profile="casinoDot1" name="dot1" position="3px -3px" size="9px 9px"/>
                 <Bitmap profile="casinoDot2" name="dot2" position="14px -3px" size="9px 9px"/>
@@ -505,7 +505,7 @@
             </Bitmap>
             <Bitmap profile="casinoCellOutside" id="casinoCell_doz1" position="66px -570px" size="294px 50px">
                 <Bitmap profile="casinoCellWin" name="win" position="0px 0px" size="294px 50px"/>
-                <Text profile="casinoCellLabel" name="label" text="1st 12" textSize="20px" position="0px 0px" size="294px 32px"/>
+                <Text profile="casinoCellLabel" name="label" text="$l10n_casino_cell_dozen1" textSize="20px" position="0px 0px" size="294px 32px"/>
                 <Text profile="casinoCellStake" name="stake" text="" position="0px -30px" size="294px 18px"/>
                 <Bitmap profile="casinoDot1" name="dot1" position="3px -3px" size="9px 9px"/>
                 <Bitmap profile="casinoDot2" name="dot2" position="14px -3px" size="9px 9px"/>
@@ -516,7 +516,7 @@
             </Bitmap>
             <Bitmap profile="casinoCellOutside" id="casinoCell_doz2" position="362px -570px" size="294px 50px">
                 <Bitmap profile="casinoCellWin" name="win" position="0px 0px" size="294px 50px"/>
-                <Text profile="casinoCellLabel" name="label" text="2nd 12" textSize="20px" position="0px 0px" size="294px 32px"/>
+                <Text profile="casinoCellLabel" name="label" text="$l10n_casino_cell_dozen2" textSize="20px" position="0px 0px" size="294px 32px"/>
                 <Text profile="casinoCellStake" name="stake" text="" position="0px -30px" size="294px 18px"/>
                 <Bitmap profile="casinoDot1" name="dot1" position="3px -3px" size="9px 9px"/>
                 <Bitmap profile="casinoDot2" name="dot2" position="14px -3px" size="9px 9px"/>
@@ -527,7 +527,7 @@
             </Bitmap>
             <Bitmap profile="casinoCellOutside" id="casinoCell_doz3" position="658px -570px" size="294px 50px">
                 <Bitmap profile="casinoCellWin" name="win" position="0px 0px" size="294px 50px"/>
-                <Text profile="casinoCellLabel" name="label" text="3rd 12" textSize="20px" position="0px 0px" size="294px 32px"/>
+                <Text profile="casinoCellLabel" name="label" text="$l10n_casino_cell_dozen3" textSize="20px" position="0px 0px" size="294px 32px"/>
                 <Text profile="casinoCellStake" name="stake" text="" position="0px -30px" size="294px 18px"/>
                 <Bitmap profile="casinoDot1" name="dot1" position="3px -3px" size="9px 9px"/>
                 <Bitmap profile="casinoDot2" name="dot2" position="14px -3px" size="9px 9px"/>
@@ -538,7 +538,7 @@
             </Bitmap>
             <Bitmap profile="casinoCellOutside" id="casinoCell_low" position="66px -622px" size="146px 50px">
                 <Bitmap profile="casinoCellWin" name="win" position="0px 0px" size="146px 50px"/>
-                <Text profile="casinoCellLabel" name="label" text="1-18" textSize="18px" position="0px 0px" size="146px 32px"/>
+                <Text profile="casinoCellLabel" name="label" text="$l10n_casino_bet_low" textSize="18px" position="0px 0px" size="146px 32px"/>
                 <Text profile="casinoCellStake" name="stake" text="" position="0px -30px" size="146px 18px"/>
                 <Bitmap profile="casinoDot1" name="dot1" position="3px -3px" size="9px 9px"/>
                 <Bitmap profile="casinoDot2" name="dot2" position="14px -3px" size="9px 9px"/>
@@ -593,7 +593,7 @@
             </Bitmap>
             <Bitmap profile="casinoCellOutside" id="casinoCell_high" position="806px -622px" size="146px 50px">
                 <Bitmap profile="casinoCellWin" name="win" position="0px 0px" size="146px 50px"/>
-                <Text profile="casinoCellLabel" name="label" text="19-36" textSize="18px" position="0px 0px" size="146px 32px"/>
+                <Text profile="casinoCellLabel" name="label" text="$l10n_casino_bet_high" textSize="18px" position="0px 0px" size="146px 32px"/>
                 <Text profile="casinoCellStake" name="stake" text="" position="0px -30px" size="146px 18px"/>
                 <Bitmap profile="casinoDot1" name="dot1" position="3px -3px" size="9px 9px"/>
                 <Bitmap profile="casinoDot2" name="dot2" position="14px -3px" size="9px 9px"/>

@@ -8,15 +8,63 @@
         <fr>Casino</fr>
     </title>
     <description>
-        <en><![CDATA[Adds a Casino page to the in-game menu with three virtual roulette tables (European, single zero).
+        <en><![CDATA[Adds a Casino page to the in-game menu with three roulette tables (European roulette, single zero). Play alone or with the other players of a multiplayer game, using your farm's in-game money.
 
-- Up to 5 seats per table. Everyone can watch; the farm manager of a farm can take a seat and bet with the farm's money.
-- All bets are visible to everyone at the table: coloured markers on the board, totals per seat and a list per player.
-- Inside bets (single, split, street, corner, six line) and outside bets (dozens, columns, red/black, odd/even, 1-18/19-36).
-- The game is the house. Stakes are charged and winnings paid when the ball lands, and both appear in the farm's finances.
-- Rounds are run by the server, so results are the same for every player. Works in single player, hosted and dedicated multiplayer.
+How to use:
+- Open the in-game menu and select the Casino page (roulette wheel icon).
+- Pick a table at the top. Click an empty seat in the player list to sit down; the button next to your seat leaves the table.
+- Pick a chip value, then click a number or an outside bet on the board. Bets close when the timer runs out, then the wheel spins.
+- Only the farm manager can sit down and bet. Everyone else can watch.
 
-Tables: Feed Store (chips 1,000 - 25,000), Grain Silo (10,000 - 250,000), High Roller (100,000 - 1,000,000).]]></en>
+Features:
+- Tables: Feed Store (chips 1,000 - 25,000), Grain Silo (10,000 - 250,000) and High Roller (100,000 - 1,000,000), 5 seats each.
+- Bets: single numbers (35 to 1), dozens and columns (2 to 1), red/black, odd/even, 1-18/19-36 (1 to 1).
+- Every bet at the table is visible to all players, with coloured markers per seat.
+- Stakes and winnings are booked when the ball lands and appear in the farm's finances as "Casino bets" and "Casino winnings".
+- Notifications: other players see who bet how much when betting closes; you see your own result.
+- In multiplayer the server runs the rounds, so every player sees the same spin.
+
+Hotkeys: none, everything is done with the mouse on the Casino page.
+
+Source code: https://github.com/Benjythebee/FS25_Casino]]></en>
+        <de><![CDATA[Fügt dem Spielmenü eine Casino-Seite mit drei Roulettetischen hinzu (europäisches Roulette mit einer Null). Spiele allein oder mit den anderen Spielern einer Mehrspielerpartie, mit dem Geld deines Hofs im Spiel.
+
+Bedienung:
+- Öffne das Spielmenü und wähle die Seite Casino (Symbol: Roulettekessel).
+- Wähle oben einen Tisch. Klicke in der Spielerliste auf einen freien Platz, um dich hinzusetzen; mit der Schaltfläche neben deinem Platz verlässt du den Tisch.
+- Wähle einen Jeton und klicke dann auf eine Zahl oder eine einfache Chance auf dem Tableau. Wenn der Timer abläuft, sind keine Einsätze mehr möglich und der Kessel dreht sich.
+- Nur der Hofverwalter kann sich setzen und spielen. Alle anderen können zuschauen.
+
+Funktionen:
+- Tische: Futterhandel (Jetons 1.000 - 25.000), Getreidesilo (10.000 - 250.000) und High Roller (100.000 - 1.000.000), je 5 Plätze.
+- Einsätze: einzelne Zahlen (35 zu 1), Dutzende und Kolonnen (2 zu 1), Rot/Schwarz, Gerade/Ungerade, 1-18/19-36 (1 zu 1).
+- Alle Einsätze am Tisch sind für alle Spieler sichtbar, mit farbigen Markierungen pro Platz.
+- Einsätze und Gewinne werden gebucht, wenn die Kugel liegt, und erscheinen in den Finanzen des Hofs als "Casino-Einsätze" und "Casino-Gewinne".
+- Benachrichtigungen: Die anderen Spieler sehen bei Spielschluss, wer wie viel gesetzt hat; du siehst dein eigenes Ergebnis.
+- Im Mehrspielermodus steuert der Server die Runden, daher sehen alle Spieler denselben Wurf.
+
+Tastenbelegung: keine, alles wird auf der Casino-Seite mit der Maus bedient.
+
+Quellcode: https://github.com/Benjythebee/FS25_Casino]]></de>
+        <fr><![CDATA[Ajoute au menu du jeu une page Casino avec trois tables de roulette (roulette européenne, un seul zéro). Jouez seul ou avec les autres joueurs d'une partie multijoueur, avec l'argent de votre ferme dans le jeu.
+
+Utilisation :
+- Ouvrez le menu du jeu et choisissez la page Casino (icône de roulette).
+- Choisissez une table en haut. Cliquez sur une place libre dans la liste des joueurs pour vous asseoir ; le bouton à côté de votre place permet de quitter la table.
+- Choisissez la valeur d'un jeton, puis cliquez sur un numéro ou une chance simple sur le tapis. Les mises se ferment à la fin du compte à rebours, puis la roue tourne.
+- Seul le gérant de la ferme peut s'asseoir et miser. Les autres joueurs peuvent regarder.
+
+Fonctions :
+- Tables : Coopérative (jetons de 1 000 à 25 000), Silo à grain (10 000 à 250 000) et High Roller (100 000 à 1 000 000), 5 places chacune.
+- Mises : numéros pleins (35 contre 1), douzaines et colonnes (2 contre 1), rouge/noir, pair/impair, 1-18/19-36 (1 contre 1).
+- Toutes les mises de la table sont visibles par tous les joueurs, avec des marqueurs de couleur par place.
+- Les mises et les gains sont comptabilisés quand la bille s'arrête et apparaissent dans les finances de la ferme ("Mises au casino" et "Gains au casino").
+- Notifications : les autres joueurs voient qui a misé combien quand les mises se ferment ; vous voyez votre propre résultat.
+- En multijoueur, le serveur gère les tours : tous les joueurs voient le même tirage.
+
+Raccourcis clavier : aucun, tout se fait à la souris sur la page Casino.
+
+Code source : https://github.com/Benjythebee/FS25_Casino]]></fr>
     </description>
     <iconFilename>icon_casino.dds</iconFilename>
     <multiplayer supported="true"/>

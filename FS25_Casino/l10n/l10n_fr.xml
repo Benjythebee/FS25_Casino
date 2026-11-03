@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <elements>
+        <e k="ui_casinoFrame" v="Casino"/>
+
+        <e k="casino_table_feedStore" v="Coopérative"/>
+        <e k="casino_table_grainSilo" v="Silo à grain"/>
+        <e k="casino_table_highRoller" v="High Roller"/>
+
+        <e k="casino_finance_bets" v="Mises au casino"/>
+        <e k="casino_finance_wins" v="Gains au casino"/>
+        <e k="casino_farm" v="Ferme"/>
+
+        <e k="casino_history" v="Derniers"/>
+        <e k="casino_chip" v="Jeton"/>
+        <e k="casino_players" v="Joueurs"/>
+        <e k="casino_yourBets" v="Vos mises"/>
+
+        <e k="casino_clearBets" v="Retirer mes mises"/>
+        <e k="casino_rebet" v="Répéter les mises"/>
+
+        <e k="casino_phase_idle" v="Table fermée - prenez place pour l'ouvrir"/>
+        <e k="casino_phase_betting" v="Faites vos jeux - %d s"/>
+        <e k="casino_phase_spinning" v="Rien ne va plus !"/>
+        <e k="casino_phase_result" v="%s - gains payés"/>
+
+        <e k="casino_color_red" v="Rouge"/>
+        <e k="casino_color_black" v="Noir"/>
+        <e k="casino_color_green" v="Vert"/>
+
+        <e k="casino_seatEmpty" v="Place libre"/>
+        <e k="casino_seatEmptyClick" v="Place libre - cliquez pour vous asseoir"/>
+        <e k="casino_you" v="Vous"/>
+        <e k="casino_seatStake" v="Sur la table : %s"/>
+        <e k="casino_seatLast" v="Dernier tour : misé %s, gagné %s"/>
+        <e k="casino_seatWaiting" v="En attente de mises"/>
+
+        <e k="casino_balance" v="Solde de la ferme : %s"/>
+        <e k="casino_stake" v="Votre mise : %s sur %s max."/>
+        <e k="casino_noBets" v="Aucune mise ce tour-ci"/>
+        <e k="casino_moreBets" v="... et %d de plus"/>
+        <e k="casino_payout" v="Paie %d contre 1"/>
+
+        <e k="casino_access_watch" v="Seul le gérant de la ferme peut miser. Vous pouvez regarder."/>
+        <e k="casino_access_manager" v="Cliquez sur une place libre pour miser avec l'argent de votre ferme."/>
+        <e k="casino_access_seated" v="Choisissez un jeton, puis cliquez sur le tapis."/>
+        <e k="casino_access_otherTable" v="Vous êtes assis à la table %s."/>
+
+        <e k="casino_notify_bet" v="Casino : %s a misé %s à la table %s"/>
+        <e k="casino_notify_won" v="Casino : vous avez misé %s à la table %s et gagné %s"/>
+        <e k="casino_notify_lost" v="Casino : vous avez misé %s à la table %s et n'avez rien gagné"/>
+
+        <e k="casino_cell_column" v="2 contre 1"/>
+        <e k="casino_cell_dozen1" v="1re douzaine"/>
+        <e k="casino_cell_dozen2" v="2e douzaine"/>
+        <e k="casino_cell_dozen3" v="3e douzaine"/>
+
+        <e k="casino_bet_split" v="Cheval"/>
+        <e k="casino_bet_corner" v="Carré"/>
+        <e k="casino_bet_street" v="Transversale"/>
+        <e k="casino_bet_sixLine" v="Sixain"/>
+        <e k="casino_bet_dozen" v="Douzaine"/>
+        <e k="casino_bet_column" v="Colonne"/>
+        <e k="casino_bet_red" v="Rouge"/>
+        <e k="casino_bet_black" v="Noir"/>
+        <e k="casino_bet_odd" v="Impair"/>
+        <e k="casino_bet_even" v="Pair"/>
+        <e k="casino_bet_low" v="1-18"/>
+        <e k="casino_bet_high" v="19-36"/>
+
+        <e k="casino_error_alreadySeated" v="Vous avez déjà une place à cette table."/>
+        <e k="casino_error_tableFull" v="Cette table est complète."/>
+        <e k="casino_error_seatTaken" v="Cette place est prise."/>
+        <e k="casino_error_notSeated" v="Prenez d'abord place à la table."/>
+        <e k="casino_error_farmChanged" v="Vous avez changé de ferme et quitté la table."/>
+        <e k="casino_error_betsClosed" v="Les mises sont fermées pour ce tour."/>
+        <e k="casino_error_invalidBet" v="Cette mise n'est pas autorisée ici."/>
+        <e k="casino_error_maxStake" v="Limite de la table atteinte pour ce tour."/>
+        <e k="casino_error_noMoney" v="Votre ferme ne peut pas couvrir cette mise."/>
+        <e k="casino_error_tooManyBets" v="Trop de mises ce tour-ci."/>
+        <e k="casino_error_noFarm" v="Rejoignez une ferme pour jouer."/>
+        <e k="casino_error_notManager" v="Seul le gérant de la ferme peut miser."/>
+        <e k="casino_error_noRebet" v="Aucune mise du dernier tour à répéter."/>
+    </elements>
+</l10n>
