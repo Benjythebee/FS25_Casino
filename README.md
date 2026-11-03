@@ -8,7 +8,8 @@ dedicated multiplayer.
 
 ## Install
 
-Download `FS25_Casino.zip` (or build it with `tools/package.ps1`), put it in
+Download `FS25_Casino.zip` from the [latest release](https://github.com/Benjythebee/FS25_Casino/releases/latest)
+(or build it with `tools/package.ps1`), put it in
 `Documents\My Games\FarmingSimulator2025\mods` and enable **Casino** when starting a savegame. In multiplayer the host
 and every player need the same zip.
 
