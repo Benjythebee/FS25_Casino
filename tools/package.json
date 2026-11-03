@@ -1,0 +1,12 @@
+{
+  "name": "fs25-casino-tools",
+  "private": true,
+  "description": "Offline checks for the FS25 Casino mod: Lua 5.1 syntax and unit tests of the roulette logic.",
+  "scripts": {
+    "check": "node check_lua.mjs && node run_tests.mjs"
+  },
+  "devDependencies": {
+    "fengari": "0.1.4",
+    "luaparse": "0.3.1"
+  }
+}

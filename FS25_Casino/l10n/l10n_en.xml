@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <elements>
+        <e k="ui_casinoFrame" v="Casino"/>
+
+        <e k="casino_table_feedStore" v="Feed Store"/>
+        <e k="casino_table_grainSilo" v="Grain Silo"/>
+        <e k="casino_table_highRoller" v="High Roller"/>
+
+        <e k="casino_finance_bets" v="Casino bets"/>
+        <e k="casino_finance_wins" v="Casino winnings"/>
+        <e k="casino_farm" v="Farm"/>
+
+        <e k="casino_history" v="Last"/>
+        <e k="casino_chip" v="Chip"/>
+        <e k="casino_players" v="Players"/>
+        <e k="casino_yourBets" v="Your bets"/>
+
+        <e k="casino_clearBets" v="Clear my bets"/>
+        <e k="casino_rebet" v="Repeat bets"/>
+
+        <e k="casino_phase_idle" v="Table closed - take a seat to open it"/>
+        <e k="casino_phase_betting" v="Place your bets - %d s"/>
+        <e k="casino_phase_spinning" v="No more bets!"/>
+        <e k="casino_phase_result" v="%s - bets paid"/>
+
+        <e k="casino_color_red" v="Red"/>
+        <e k="casino_color_black" v="Black"/>
+        <e k="casino_color_green" v="Green"/>
+
+        <e k="casino_seatEmpty" v="Empty seat"/>
+        <e k="casino_seatEmptyClick" v="Empty seat - click to sit"/>
+        <e k="casino_you" v="you"/>
+        <e k="casino_seatStake" v="On the table: %s"/>
+        <e k="casino_seatLast" v="Last round: staked %s, won %s"/>
+        <e k="casino_seatWaiting" v="Waiting for bets"/>
+
+        <e k="casino_balance" v="Farm balance: %s"/>
+        <e k="casino_stake" v="Your stake: %s of %s max"/>
+        <e k="casino_noBets" v="No bets this round"/>
+        <e k="casino_moreBets" v="... and %d more"/>
+        <e k="casino_payout" v="pays %d to 1"/>
+
+        <e k="casino_access_watch" v="Only the farm manager can bet. You can watch."/>
+        <e k="casino_access_manager" v="Click an empty seat to bet with your farm's money."/>
+        <e k="casino_access_seated" v="Pick a chip, then click the board."/>
+        <e k="casino_access_otherTable" v="You are seated at %s."/>
+
+        <e k="casino_notify_bet" v="Casino: %s bet %s at %s"/>
+        <e k="casino_notify_won" v="Casino: you bet %s at %s and won %s"/>
+        <e k="casino_notify_lost" v="Casino: you bet %s at %s and did not win"/>
+
+        <e k="casino_bet_split" v="Split"/>
+        <e k="casino_bet_corner" v="Corner"/>
+        <e k="casino_bet_street" v="Street"/>
+        <e k="casino_bet_sixLine" v="Six line"/>
+        <e k="casino_bet_dozen" v="Dozen"/>
+        <e k="casino_bet_column" v="Column"/>
+        <e k="casino_bet_red" v="Red"/>
+        <e k="casino_bet_black" v="Black"/>
+        <e k="casino_bet_odd" v="Odd"/>
+        <e k="casino_bet_even" v="Even"/>
+        <e k="casino_bet_low" v="1-18"/>
+        <e k="casino_bet_high" v="19-36"/>
+
+        <e k="casino_error_alreadySeated" v="You already have a seat at this table."/>
+        <e k="casino_error_tableFull" v="This table is full."/>
+        <e k="casino_error_seatTaken" v="That seat is taken."/>
+        <e k="casino_error_notSeated" v="Take a seat first."/>
+        <e k="casino_error_farmChanged" v="You changed farm, so you left the table."/>
+        <e k="casino_error_betsClosed" v="Bets are closed for this round."/>
+        <e k="casino_error_invalidBet" v="That bet is not allowed here."/>
+        <e k="casino_error_maxStake" v="Table limit reached for this round."/>
+        <e k="casino_error_noMoney" v="Your farm cannot cover that bet."/>
+        <e k="casino_error_tooManyBets" v="Too many bets this round."/>
+        <e k="casino_error_noFarm" v="Join a farm to play."/>
+        <e k="casino_error_notManager" v="Only the farm manager can bet."/>
+        <e k="casino_error_noRebet" v="No bets from the last round to repeat."/>
+    </elements>
+</l10n>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="115">
+    <author>Benjythebee</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Casino</en>
+        <de>Casino</de>
+        <fr>Casino</fr>
+    </title>
+    <description>
+        <en><![CDATA[Adds a Casino page to the in-game menu with three virtual roulette tables (European, single zero).
+
+- Up to 5 seats per table. Everyone can watch; the farm manager of a farm can take a seat and bet with the farm's money.
+- All bets are visible to everyone at the table: coloured markers on the board, totals per seat and a list per player.
+- Inside bets (single, split, street, corner, six line) and outside bets (dozens, columns, red/black, odd/even, 1-18/19-36).
+- The game is the house. Stakes are charged and winnings paid when the ball lands, and both appear in the farm's finances.
+- Rounds are run by the server, so results are the same for every player. Works in single player, hosted and dedicated multiplayer.
+
+Tables: Feed Store (chips 1,000 - 25,000), Grain Silo (10,000 - 250,000), High Roller (100,000 - 1,000,000).]]></en>
+    </description>
+    <iconFilename>icon_casino.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/Casino.lua"/>
+    </extraSourceFiles>
+
+    <l10n filenamePrefix="l10n/l10n"/>
+</modDesc>

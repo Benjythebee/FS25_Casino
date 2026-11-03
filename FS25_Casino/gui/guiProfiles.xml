@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUIProfiles>
+    <Profile name="casinoHeaderIcon" extends="fs25_menuHeaderIcon">
+        <imageSliceId value="gui.icon_ingameMenu_finances" />
+    </Profile>
+
+    <Profile name="casinoContent" extends="emptyPanel" with="anchorTopLeft">
+        <size value="1550px 830px" />
+        <position value="0px 0px" />
+    </Profile>
+
+    <!-- Board cells. baseReference draws a plain rectangle in imageColor. -->
+    <Profile name="casinoCellBase" extends="baseReference" with="anchorTopLeft">
+        <imageColor value="0.05 0.25 0.11 1" />
+    </Profile>
+    <Profile name="casinoCellRed" extends="casinoCellBase">
+        <imageColor value="0.62 0.07 0.07 1" />
+    </Profile>
+    <Profile name="casinoCellBlack" extends="casinoCellBase">
+        <imageColor value="0.06 0.06 0.06 1" />
+    </Profile>
+    <Profile name="casinoCellGreen" extends="casinoCellBase">
+        <imageColor value="0.03 0.45 0.16 1" />
+    </Profile>
+    <Profile name="casinoCellOutside" extends="casinoCellBase">
+        <imageColor value="0.04 0.20 0.09 1" />
+    </Profile>
+    <Profile name="casinoCellWin" extends="baseReference" with="anchorTopLeft">
+        <imageColor value="1 0.82 0.15 0.45" />
+        <visible value="false" />
+    </Profile>
+    <Profile name="casinoCellLabel" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="24px" />
+        <textBold value="true" />
+        <textAlignment value="center" />
+        <textColor value="1 1 1 1" />
+    </Profile>
+    <Profile name="casinoCellStake" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="14px" />
+        <textBold value="true" />
+        <textAlignment value="center" />
+        <textColor value="1 0.85 0.3 1" />
+    </Profile>
+    <Profile name="casinoCellHit" extends="baseReference" with="anchorTopLeft">
+        <handleFocus value="false" />
+        <imageColor value="0 0 0 0" />
+        <imageHighlightedColor value="1 1 1 0.15" />
+        <imageFocusedColor value="1 1 1 0.15" />
+        <imagePressedColor value="1 1 1 0.3" />
+        <imageSelectedColor value="0 0 0 0" />
+        <imageDisabledColor value="0 0 0 0" />
+    </Profile>
+
+    <!-- Seat colours (keep in sync with Casino.SEAT_COLORS) -->
+    <Profile name="casinoDot" extends="baseReference" with="anchorTopLeft">
+        <visible value="false" />
+    </Profile>
+    <Profile name="casinoDot1" extends="casinoDot"><imageColor value="0.98 0.78 0.12 1" /></Profile>
+    <Profile name="casinoDot2" extends="casinoDot"><imageColor value="0.25 0.62 1.00 1" /></Profile>
+    <Profile name="casinoDot3" extends="casinoDot"><imageColor value="0.90 0.30 0.90 1" /></Profile>
+    <Profile name="casinoDot4" extends="casinoDot"><imageColor value="0.15 0.90 0.60 1" /></Profile>
+    <Profile name="casinoDot5" extends="casinoDot"><imageColor value="1.00 0.48 0.15 1" /></Profile>
+
+    <Profile name="casinoSeatSwatch" extends="baseReference" with="anchorTopLeft" />
+    <Profile name="casinoSeatSwatch1" extends="casinoSeatSwatch"><imageColor value="0.98 0.78 0.12 1" /></Profile>
+    <Profile name="casinoSeatSwatch2" extends="casinoSeatSwatch"><imageColor value="0.25 0.62 1.00 1" /></Profile>
+    <Profile name="casinoSeatSwatch3" extends="casinoSeatSwatch"><imageColor value="0.90 0.30 0.90 1" /></Profile>
+    <Profile name="casinoSeatSwatch4" extends="casinoSeatSwatch"><imageColor value="0.15 0.90 0.60 1" /></Profile>
+    <Profile name="casinoSeatSwatch5" extends="casinoSeatSwatch"><imageColor value="1.00 0.48 0.15 1" /></Profile>
+
+    <Profile name="casinoSeatBg" extends="baseReference" with="anchorTopLeft">
+        <imageColor value="0 0 0 0.55" />
+    </Profile>
+    <Profile name="casinoSeatHit" extends="casinoCellHit">
+        <imageHighlightedColor value="1 1 1 0.08" />
+        <imageFocusedColor value="1 1 1 0.08" />
+        <imagePressedColor value="1 1 1 0.16" />
+    </Profile>
+    <Profile name="casinoLeaveButton" extends="baseReference" with="anchorTopLeft">
+        <handleFocus value="false" />
+        <imageColor value="0 0 0 0.55" />
+        <imageHighlightedColor value="0.62 0.07 0.07 0.9" />
+        <imageFocusedColor value="0.62 0.07 0.07 0.9" />
+        <imagePressedColor value="0.75 0.1 0.1 1" />
+        <imageDisabledColor value="0 0 0 0.3" />
+    </Profile>
+    <Profile name="casinoLeaveIcon" extends="casinoWheel" />
+    <Profile name="casinoSeatName" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="20px" />
+        <textBold value="true" />
+        <textColor value="1 1 1 1" />
+        <textLayoutMode value="truncate" />
+    </Profile>
+    <Profile name="casinoSeatInfo" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="16px" />
+        <textColor value="0.85 0.85 0.85 1" />
+        <textLayoutMode value="truncate" />
+    </Profile>
+
+    <!-- Wheel (texture set from Lua), pointer, hub label and history -->
+    <Profile name="casinoWheel" extends="baseReference" with="anchorTopLeft">
+        <imageSliceId value="noSlice" />
+        <imageColor value="1 1 1 1" />
+    </Profile>
+    <Profile name="casinoPointer" extends="baseReference" with="anchorTopLeft">
+        <imageColor value="1 0.82 0.15 1" />
+    </Profile>
+    <Profile name="casinoHub" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="34px" />
+        <textBold value="true" />
+        <textAlignment value="center" />
+        <textColor value="1 1 1 1" />
+    </Profile>
+    <Profile name="casinoPocket" extends="baseReference" with="anchorTopLeft">
+        <imageColor value="0.06 0.06 0.06 1" />
+    </Profile>
+    <Profile name="casinoPocketLabel" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="32px" />
+        <textBold value="true" />
+        <textAlignment value="center" />
+        <textColor value="1 1 1 1" />
+    </Profile>
+    <Profile name="casinoHistLabel" extends="casinoPocketLabel">
+        <textSize value="17px" />
+    </Profile>
+
+    <!-- Buttons and texts -->
+    <Profile name="casinoButton" extends="baseReference" with="anchorTopLeft">
+        <handleFocus value="false" />
+        <imageColor value="0 0 0 0.6" />
+        <imageHighlightedColor value="0.22323 0.40724 0.00368 0.6" />
+        <imageFocusedColor value="0.22323 0.40724 0.00368 0.6" />
+        <imagePressedColor value="0.22323 0.40724 0.00368 1" />
+        <imageSelectedColor value="0.22323 0.40724 0.00368 1" />
+        <imageDisabledColor value="0 0 0 0.3" />
+        <textSize value="17px" />
+        <textBold value="true" />
+        <textAlignment value="center" />
+        <textColor value="1 1 1 1" />
+        <textHighlightedColor value="1 1 1 1" />
+        <textFocusedColor value="1 1 1 1" />
+        <textSelectedColor value="1 1 1 1" />
+        <textDisabledColor value="0.45 0.45 0.45 1" />
+    </Profile>
+
+    <Profile name="casinoStatus" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="26px" />
+        <textBold value="true" />
+        <textColor value="1 1 1 1" />
+    </Profile>
+    <Profile name="casinoHeading" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="22px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textColor value="$preset_fs25_colorMainLight" />
+    </Profile>
+    <Profile name="casinoSmallLabel" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="16px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textColor value="0.8 0.8 0.8 1" />
+    </Profile>
+    <Profile name="casinoInfo" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="18px" />
+        <textColor value="1 1 1 1" />
+    </Profile>
+    <Profile name="casinoBetLine" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="16px" />
+        <textColor value="0.9 0.9 0.9 1" />
+        <textLayoutMode value="truncate" />
+    </Profile>
+    <Profile name="casinoMessage" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="18px" />
+        <textBold value="true" />
+        <textColor value="1 0.6 0.25 1" />
+    </Profile>
+    <Profile name="casinoAccess" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="17px" />
+        <textColor value="0.75 0.75 0.75 1" />
+    </Profile>
+</GUIProfiles>
