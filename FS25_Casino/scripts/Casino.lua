@@ -461,6 +461,7 @@ function Casino.addMenuPage(menu, frame, pageName, insertAfter)
         moveToPosition(menu.pageFrames, frame, position)
     end
 
+    CasinoFrame.fixTabListOverflow(menu.pagingTabList)
     menu:rebuildTabList()
 end
 

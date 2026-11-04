@@ -270,6 +270,32 @@ for previous = 0, 36 do
     check(angleEquals(bettingStart, rotation(PHASE.RESULT, 0, previous, previous)), "no jump into betting")
 end
 
+-- Menu tab list -------------------------------------------------------------------------------------------------
+
+-- Same sums as SmoothListElement:buildSectionInfo, with the sizes measured at 1920x1080: the offset only changes while
+-- the tabs fit, so the 5 tab state leaves 210 behind (the first tab sat at y=210 in multiplayer)
+local tabList = {absSize = {0, 1040}, lengthAxis = 2, listItemAlignment = 0.5, listItemAlignmentOffset = 0, numTabs = 0}
+function tabList:buildSectionInfo()
+    self.contentSize = self.numTabs * 124
+    local contentOffset = self.absSize[self.lengthAxis] - self.contentSize
+    if contentOffset > 0 then
+        self.listItemAlignmentOffset = contentOffset * self.listItemAlignment
+    end
+end
+
+local function offsetWithTabs(numTabs)
+    tabList.numTabs = numTabs
+    tabList:buildSectionInfo()
+    return tabList.listItemAlignmentOffset
+end
+
+check(offsetWithTabs(5) == 210 and offsetWithTabs(9) == 210, "without the fix 9 tabs keep the offset of 5")
+CasinoFrame.fixTabListOverflow(tabList)
+check(offsetWithTabs(5) == 210, "5 tabs stay centred")
+check(offsetWithTabs(8) == 24, "8 tabs stay centred")
+check(offsetWithTabs(9) == 0, "9 tabs start at the top of the list")
+check(offsetWithTabs(8) == 24, "centred again once the tabs fit")
+
 print(string.format("%d checks, %d failures", checks, failures))
 if failures > 0 then
     error("tests failed")

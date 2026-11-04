@@ -51,6 +51,18 @@ function CasinoFrame.formatShort(value)
     return tostring(value)
 end
 
+---Keeps every tab of the menu's tab list reachable. The list centres its tabs with an offset that it only updates
+-- while they fit, so once there are too many (multiplayer adds a tab) the old offset pushes the last tabs off screen.
+function CasinoFrame.fixTabListOverflow(list)
+    local buildSectionInfo = list.buildSectionInfo
+    list.buildSectionInfo = function(self, ...)
+        buildSectionInfo(self, ...)
+        if self.contentSize >= self.absSize[self.lengthAxis] then
+            self.listItemAlignmentOffset = 0
+        end
+    end
+end
+
 function CasinoFrame.new(casino)
     local self = TabbedMenuFrameElement.new(nil, CasinoFrame_mt)
 
